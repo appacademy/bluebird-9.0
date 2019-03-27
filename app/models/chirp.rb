@@ -13,11 +13,19 @@ class Chirp < ApplicationRecord
   validates :body, presence: true
   validate :check_length_one
 
-  belongs_to(:author, {
+  belongs_to :author, 
     primary_key: :id, 
     foreign_key: :author_id, 
     class_name: :User
-  })
+  
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :chirp_id,
+    class_name: :Like
+
+  has_many :likers,
+    through: :likes,
+    source: :liker
 
   def check_length_one
     if self.body.length == 1

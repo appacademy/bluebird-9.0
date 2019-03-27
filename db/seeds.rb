@@ -62,12 +62,12 @@ ActiveRecord::Base.transaction do
   chirp12 = Chirp.create!(author_id: andy.id, body: quotes.pop)
   chirp13 = Chirp.create!(author_id: jesse.id, body: quotes.pop)
 
-  # Like.destroy_all
+  Like.destroy_all
 
-  # 20.times do
-  #   begin
-  #     Like.create!(user_id: User.all.sample.id, chirp_id: Chirp.all.sample.id)
-  #   rescue => exception
-  #   end
-  # end
+  20.times do
+    begin
+      Like.create!(user_id: User.all.sample.id, chirp_id: Chirp.all.sample.id)
+    # rescue => exception
+    end
+  end
 end
