@@ -27,6 +27,11 @@ class Chirp < ApplicationRecord
     through: :likes,
     source: :liker
 
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :chirp_id,
+    class_name: :Comment
+
   def check_length_one
     if self.body.length == 1
       errors[:body].push("Chuck Norris thinks your message is too short.")
