@@ -67,7 +67,7 @@ ActiveRecord::Base.transaction do
   20.times do
     begin
       Like.create!(user_id: User.all.sample.id, chirp_id: Chirp.all.sample.id)
-    # rescue => exception
+    rescue => exception
     end
   end
 end
