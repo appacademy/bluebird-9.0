@@ -1,0 +1,6 @@
+<%= render 'user', user: @user, action: :show %>
+<a href="<%= edit_user_url(@user) %>">Edit me.</a>
+<form action="<%= user_url(@user) %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Avadakadavra!!!!">
+</form>

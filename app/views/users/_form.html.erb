@@ -1,0 +1,36 @@
+<%
+    if type == :new 
+        header_text = "Create New User"
+        action = users_url
+        button_text = "Create Wizard"
+    else
+        header_text = "Edit This User"
+        action = user_url(user) 
+        button_text = "Transfigure!"
+    end 
+%>
+
+<h1><%= header_text %></h1>
+
+<form action="<%= action %>" method="post">
+    <%# overwrite the method %>
+    <% if type == :edit %>
+        <input type="hidden" name="_method" value="patch">
+    <% end %>
+    
+    <label >Username: 
+        <input type="text" name="user[username]" value="<%= user.username %>">
+    </label>
+    <br>
+    <label >Email: 
+        <input type="email" name="user[email]" value="<%= user.email %>">
+    </label>
+    <br>
+
+    <%# different style of writing labels %>
+    <label for="age">Age: </label>
+    <input id="age" type="text" name="user[age]" value="<%= user.age %>">
+    <br>
+
+    <input type="submit" value="<%= button_text %>">
+</form>

@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   # get '/users', to: 'users#index'
   # get '/users/:id', to: 'users#show'
   # post '/users', to: 'users#create'
-  get '/custom', to: 'users#cheese' # we can do this too!
+  # get '/custom', to: 'users#cheese' # we can do this too!
 
   # can do except instead of only 
-  resources :users, only: [:index, :show, :create] do
+  resources :users do
     # maybe we have a form to create a chirp on the user show page
     resources :chirps, only: [:create, :index]
   end 
