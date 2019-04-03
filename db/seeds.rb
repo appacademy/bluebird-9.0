@@ -11,13 +11,13 @@ ActiveRecord::Base.transaction do
   User.destroy_all
 
   # Wizards
-  hagrid = User.create!(username: 'Rubeus Hagrid', age: 45, political_affiliation: "Giant", email: "hagrid@hogwarts.io")
-  harry = User.create!(username: 'Harry Potter', age: 11, political_affiliation: "Gryffindor", email: "harry@hogwarts.io")
-  hermione = User.create!(username: 'Hermione Granger', age: 11, political_affiliation: "Gryffindor", email: "hermione@hogwarts.io")
-  ron = User.create!(username: 'Ron Weasley', age: 11, political_affiliation: "Gryffindor", email: "ron@hogwarts.io")
-  dumbledore = User.create!(username: "Albus Dumbledore", age: 93, political_affiliation: "Headmaster", email: "dumbledore@hogwarts.io")
-  draco = User.create!(username: "Draco Malfoy", age: 11, political_affiliation: "Slytherin", email: "draco@hogwarts.io")
-  nimbus = User.create!(username: "Nimbus", age: 45, email: "brooms@nimbus.io")
+  hagrid = User.create!(username: 'Rubeus Hagrid', age: 45, political_affiliation: "Giant", email: "hagrid@hogwarts.io", password: "password")
+  harry = User.create!(username: 'Harry Potter', age: 11, political_affiliation: "Gryffindor", email: "harry@hogwarts.io", password: "password")
+  hermione = User.create!(username: 'Hermione Granger', age: 11, political_affiliation: "Gryffindor", email: "hermione@hogwarts.io", password: "password")
+  ron = User.create!(username: 'Ron Weasley', age: 11, political_affiliation: "Gryffindor", email: "ron@hogwarts.io", password: "password")
+  dumbledore = User.create!(username: "Albus Dumbledore", age: 93, political_affiliation: "Headmaster", email: "dumbledore@hogwarts.io", password: "password")
+  draco = User.create!(username: "Draco Malfoy", age: 11, political_affiliation: "Slytherin", email: "draco@hogwarts.io", password: "password")
+  nimbus = User.create!(username: "Nimbus", age: 45, email: "brooms@nimbus.io", password: "password")
 
   Chirp.destroy_all
 
@@ -42,7 +42,7 @@ ActiveRecord::Base.transaction do
   Like.destroy_all
 
   # Likes
-  
+
   # Hagrid
   Like.create!(user_id: hagrid.id, chirp_id: chirp3.id)
   Like.create!(user_id: hagrid.id, chirp_id: chirp4.id)
@@ -103,19 +103,19 @@ ActiveRecord::Base.transaction do
   # users = []
   # cynthia = User.create!(username: 'oh_ma_stars', email: 'oh_ma_stars@gmail.com')
   # users << cynthia
-  
+
   # jennifer = User.create!(username: "that_fish", email: 'jenken@gmail.com')
   # users << jennifer
 
   # liz = User.create!(username: "queen_joob", email: 'queen_joob@gmail.com')
   # users << liz
-  
+
   # andy = User.create!(username: 'wynk_wynk', email: 'wynk_wynk@gmail.com')
   # users << andy
 
   # andy_m = User.create!(username: 'the_real_andy', email: 'andym@gmail.com')
   # users << andy_m
-  
+
   # mike = User.create!(username: 'squeakycheese', email: 'cheesecurds@gmail.com')
   # users << mike
 
@@ -124,10 +124,10 @@ ActiveRecord::Base.transaction do
 
   # rhonil = User.create!(username: "rho_yourboat", email: 'rho_yourboat@gmail.com')
   # users << rhonil
-  
+
   # elliot = User.create!(username: "smelliot", email: 'smiz@gmail.com')
   # users << elliot
-  
+
   # jesse = User.create!(username: "ma_man", email: 'not_a_pod_leader@gmail.com')
   # users << jesse
 

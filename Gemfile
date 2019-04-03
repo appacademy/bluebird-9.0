@@ -52,6 +52,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
   gem 'pry-rails'
+  gem 'bcrypt'
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 group :test do

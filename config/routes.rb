@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   # post '/users', to: 'users#create'
   # get '/custom', to: 'users#cheese' # we can do this too!
 
-  # can do except instead of only 
+  # can do except instead of only
   resources :users do
     # maybe we have a form to create a chirp on the user show page
     resources :chirps, only: [:create, :index]
-  end 
+  end
 
+  resource :session, only: [:new, :create, :destroy]
 
   resources :chirps, only: [:show]
 
