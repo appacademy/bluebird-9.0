@@ -1,6 +1,9 @@
 {
   "name": "bluebird",
   "private": true,
+  "scripts": {
+    "start": "webpack --watch --mode=development"
+  },
   "dependencies": {
     "logger": "0.0.1",
     "react": "^16.8.6",

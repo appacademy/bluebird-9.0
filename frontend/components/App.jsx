@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ChirpIndex from './chirps/ChirpIndex';
-import ChirpForm from './chirps/ChirpForm';
+import ChirpIndexContainer from './chirps/ChirpIndexContainer';
+import ChirpFormContainer from './chirps/ChirpFormContainer';
 
 const App = () => (
   <>
-    <ChirpForm />
-    <ChirpIndex />
+    <ChirpFormContainer />
+    <ChirpIndexContainer />
   </>
 );
 
