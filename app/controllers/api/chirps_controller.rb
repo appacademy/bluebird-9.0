@@ -1,5 +1,4 @@
 class Api::ChirpsController < ApplicationController
-
   def index
     chirps = Chirp.all
     render json: chirps
@@ -9,7 +8,7 @@ class Api::ChirpsController < ApplicationController
     chirp = Chirp.new(chirp_params)
     chirp.user_id = User.all.sample.id
 
-     if chirp.save
+    if chirp.save
       render json: chirp
     else
       render json: chirp.errors.full_messages, status: 422
