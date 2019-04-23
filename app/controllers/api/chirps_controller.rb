@@ -6,7 +6,7 @@ class Api::ChirpsController < ApplicationController
 
   def create
     chirp = Chirp.new(chirp_params)
-    chirp.user_id = User.all.sample.id
+    chirp.author_id = User.all.sample.id
 
     if chirp.save
       render json: chirp
